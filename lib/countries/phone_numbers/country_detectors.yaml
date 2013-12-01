@@ -1,0 +1,123 @@
+--- # North American Numbering Plan
+applies_to: 1
+default: US
+one_of: {
+    CA: [ # Canada
+      403, 587, 780, 825, # Alberta
+      236, 250, 604, 672, 778, # British Columbia
+      204, 431, # Manitoba
+      506, # New Brunswick
+      709, # Newfoundland and Labrador
+      902, # Nova Scotia
+      226, 249, 289, 343, 365, 416, 437, 519, 613, 647, 705, 807, 905, # Ontario
+      902, # Prince Edward Island
+      418, 438, 450, 514, 579, 581, 819, 873, # Quebec
+      306, 639, # Saskatchewan
+      867 # Yukon, Northwest Territories, and Nunavut
+    ],
+    AS: [ 684 ], # American Samoa
+    AI: [ 264 ], # Anguila
+    AG: [ 268 ], # Antigua & Barbuda
+    BS: [ 242 ], # The Bahamas
+    BB: [ 246 ], # Barbados
+    BM: [ 441 ], # Bermuda
+    VG: [ 284 ], # British Virgin Islands
+    KY: [ 345 ], # Cayman Islands
+    DM: [ 767 ], # Dominica
+    DO: [ 809, 829, 849 ], # Dominican Republic
+    GD: [ 473 ], # Grenada
+    GU: [ 671 ], # Guam
+    JM: [ 876 ], # Jamaica
+    MS: [ 664 ], # Montserrat
+    KN: [ 869 ], # St Kitts & Nevis
+    MP: [ 670 ], # Northern Mariana Islands
+    PR: [ 787, 939 ], # Puerto Rico
+    LC: [ 758 ], # St. Lucia
+    VC: [ 784 ], # St Vincent & the Grenadines
+    SX: [ 721 ], # Sint Martin
+    TT: [ 868 ], # Trinidad & Tobago
+    TC: [ 649 ], # Turks & Caicos Islands
+    VI: [ 340 ] # Virgin Islands
+  }
+
+--- # Russia & Kazakhastan
+applies_to: 7
+default: RU
+start_with: {
+    KZ: [ 6, 7 ]
+  }
+
+--- # Italy & Vatican City
+applies_to: 39
+default: IT
+start_with: {
+    VA: [ '06698' ]
+  }
+
+--- # United Kingdom, Jersey, Gurnssey, & Isle of Man
+applies_to: 44
+default: GB
+start_with: {
+    GG: [ 1481, 7781, 7839, 7911 ],
+    JE: [ 1534, 7509, 7797, 7937, 7700, 7829 ],
+    IM: [ 1624, 7624, 7524, 7924 ],
+  }
+
+--- # Norway & Svalbard
+applies_to: 47
+default: 'NO'
+start_with: {
+    SJ: [ 79 ]
+  }
+
+--- # Australian Telephone Numbering Plan
+applies_to: 61
+default: AU
+start_with: {
+    CX: [ 89164 ],
+    CC: [ 89162 ]
+  }
+
+--- # Morocco & Western Sahara
+applies_to: 212
+default: MA
+start_with: {
+    SH: [ 5288, 5289 ]
+  }
+
+--- # Ascension Island (part of St Helena)
+applies_to: 247
+default: SH
+
+--- # Reunion & Mayotte
+applies_to: 262
+default: RE
+start_with: {
+    YT: [ 269, 639 ]
+  }
+
+--- # Finland & Analand Island
+applies_to: 358
+default: FI
+start_with: {
+    AX: [ 18, 457 ]
+  }
+
+--- # Falklands; South Sandwith Islands
+applies_to: 500
+default: FK
+
+--- # Guadalupe; Saint Barthelemy; Saint Martin (default to Guadalupe)
+applies_to: 590
+default: GP
+
+--- # Netherlands Antilles; Bonaire, Sint Eustatius and Saba; Curacao
+applies_to: 599
+default: AN
+start_with: {
+    CW: [ 97 ]
+  }
+
+--- # Norfolk Island & Antartica (We're just going to ignore Antartica)
+applies_to: 672
+default: NF
