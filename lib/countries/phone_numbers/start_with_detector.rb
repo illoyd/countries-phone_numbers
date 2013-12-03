@@ -1,4 +1,4 @@
-class Countries::PhoneNumbers::StartWithCountryDetector < Countries::PhoneNumbers::CountryDetector
+class Countries::PhoneNumbers::StartWithDetector < Countries::PhoneNumbers::Detector
 
   def initialize( config )
     super config

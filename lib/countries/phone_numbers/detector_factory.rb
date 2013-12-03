@@ -38,11 +38,11 @@ class Countries::PhoneNumbers::DetectorFactory
     # Build a new config tool based on the given strategy
     return case
       when config.include?('start_with')
-        Countries::PhoneNumbers::StartWithCountryDetector.new config
+        Countries::PhoneNumbers::StartWithDetector.new config
       when config.include?('one_of')
-        Countries::PhoneNumbers::OneOfCountryDetector.new config
+        Countries::PhoneNumbers::OneOfDetector.new config
       else
-        Countries::PhoneNumbers::CountryDetector.new config
+        Countries::PhoneNumbers::Detector.new config
       end
   end
 

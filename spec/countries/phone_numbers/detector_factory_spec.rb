@@ -13,7 +13,7 @@ describe Countries::PhoneNumbers::DetectorFactory do
   let(:one_of_config)     { { 'applies_to' => applies_to, 'default' => default_country, 'one_of' => { alternate_country => [ one_of_prefix ] } } }
   let(:start_with_config) { { 'applies_to' => applies_to, 'default' => default_country, 'start_with' => { alternate_country => [ start_with_prefix ] } } }
 
-  let(:default_detector)  { Countries::PhoneNumbers::CountryDetector.new(default_config) }
+  let(:default_detector)  { Countries::PhoneNumbers::Detector.new(default_config) }
   
   describe '.new' do
 
@@ -96,15 +96,15 @@ describe Countries::PhoneNumbers::DetectorFactory do
   
   describe '#build_detector' do
     it 'returns a generic detector' do
-      expect( subject.send(:build_detector, default_config) ).to be_a(Countries::PhoneNumbers::CountryDetector)
+      expect( subject.send(:build_detector, default_config) ).to be_a(Countries::PhoneNumbers::Detector)
     end
     
     it 'returns a one-of detector' do
-      expect( subject.send(:build_detector, one_of_config) ).to be_a(Countries::PhoneNumbers::OneOfCountryDetector)
+      expect( subject.send(:build_detector, one_of_config) ).to be_a(Countries::PhoneNumbers::OneOfDetector)
     end
     
     it 'returns a start-with detector' do
-      expect( subject.send(:build_detector, start_with_config) ).to be_a(Countries::PhoneNumbers::StartWithCountryDetector)
+      expect( subject.send(:build_detector, start_with_config) ).to be_a(Countries::PhoneNumbers::StartWithDetector)
     end
   end
 
