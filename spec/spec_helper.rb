@@ -1,5 +1,10 @@
 require 'rubygems'
 require 'bundler/setup'
+require 'json'
+
+require 'simplecov'
+SimpleCov.start
+
 require 'countries/phone_numbers'
 
 require 'yaml'
