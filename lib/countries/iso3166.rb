@@ -8,7 +8,7 @@ class ISO3166::Country
   end
 
   def self.tokenize_phone_number( number )
-    Phony.split( Phony.normalize( number ) )
+    Phony.split( normalize_phone_number( number ) )
   end
 
   ##
