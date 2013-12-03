@@ -104,7 +104,7 @@ describe Countries::PhoneNumbers::DetectorFactory do
     end
     
     it 'returns a start-with detector' do
-      expect( subject.send(:build_detector, start_with_config) ).to be_a(Countries::PhoneNumbers::StartWithCountryDetector)
+      expect( subject.send(:build_detector, start_with_config) ).to be_a(Countries::PhoneNumbers::StartWithDetector)
     end
   end
 
