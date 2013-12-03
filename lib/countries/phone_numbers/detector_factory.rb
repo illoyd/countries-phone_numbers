@@ -42,7 +42,7 @@ class Countries::PhoneNumbers::DetectorFactory
       when config.include?('one_of')
         Countries::PhoneNumbers::OneOfCountryDetector.new config
       else
-        Countries::PhoneNumbers::CountryDetector.new config
+        Countries::PhoneNumbers::Detector.new config
       end
   end
 

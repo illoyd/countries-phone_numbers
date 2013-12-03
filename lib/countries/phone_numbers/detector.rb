@@ -1,4 +1,4 @@
-class Countries::PhoneNumbers::CountryDetector
+class Countries::PhoneNumbers::Detector
 
   attr_accessor :country_codes, :applies_to, :default
   
