@@ -12,7 +12,7 @@ require 'countries/phone_numbers/one_of_detector'
 require 'countries/phone_numbers/start_with_detector'
 
 # Gem extensions
-require 'countries/iso3166'
+# require 'countries/iso3166'
 
 module Countries
   module PhoneNumbers

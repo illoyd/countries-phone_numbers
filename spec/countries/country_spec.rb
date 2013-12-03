@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'countries/phone_numbers'
+require 'countries/phone_numbers/ext'
 
 describe ISO3166::Country, '#find_*_by_phone_number' do
   subject { Country }
@@ -25,14 +25,6 @@ describe ISO3166::Country, '#find_*_by_phone_number' do
         Country.find_all_countries_by_phone_number(number).should have(1).country
       end
     end
-  end
-  
-  Country.unresolved_country_codes.each do |country_code, countries|
-    pending "Need to resolve CC: #{country_code} for #{countries.join(', ')}."
-  end
-  
-  (Country.all.map{ |country| country[1] } - TEST_DATA.keys).each do |alpha2|
-    pending "No tests for #{Country[alpha2].name} (#{alpha2})."
   end
   
 end
