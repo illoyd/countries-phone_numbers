@@ -6,9 +6,9 @@ require 'phony'
 
 # Country::PhoneNumber
 require 'countries/phone_numbers/detector_factory'
-require 'countries/phone_numbers/one_of_country_detector'
 require 'countries/phone_numbers/start_with_country_detector'
 require 'countries/phone_numbers/detector'
+require 'countries/phone_numbers/one_of_detector'
 
 # Gem extensions
 require 'countries/iso3166'

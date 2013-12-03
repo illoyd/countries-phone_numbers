@@ -40,7 +40,7 @@ class Countries::PhoneNumbers::DetectorFactory
       when config.include?('start_with')
         Countries::PhoneNumbers::StartWithCountryDetector.new config
       when config.include?('one_of')
-        Countries::PhoneNumbers::OneOfCountryDetector.new config
+        Countries::PhoneNumbers::OneOfDetector.new config
       else
         Countries::PhoneNumbers::Detector.new config
       end

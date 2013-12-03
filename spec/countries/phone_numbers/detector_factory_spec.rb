@@ -100,7 +100,7 @@ describe Countries::PhoneNumbers::DetectorFactory do
     end
     
     it 'returns a one-of detector' do
-      expect( subject.send(:build_detector, one_of_config) ).to be_a(Countries::PhoneNumbers::OneOfCountryDetector)
+      expect( subject.send(:build_detector, one_of_config) ).to be_a(Countries::PhoneNumbers::OneOfDetector)
     end
     
     it 'returns a start-with detector' do
