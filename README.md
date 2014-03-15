@@ -6,7 +6,7 @@ Integrate phone number to country lookup functionality into the ever-popular [Co
 
 Add this line to your application's Gemfile:
 
-    gem 'countries-plus-phonenumbers'
+    gem 'countries-phone_numbers'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install countries-plus-phonenumbers
+    $ gem install countries-phone_numbers
 
 ## Usage
 
@@ -35,7 +35,7 @@ This gives you the normal country object. Treat it like you would any other sear
 
 ## What about countries that share the same Country Code?
 
-When multiple countries share a single country code - for instance, the North American Number Plan (NANP) - CountryDetectors are employed to provide additional analysis and intepretation. These detectors are not perfect, but they should catch most ambiguous situations.
+When multiple countries share a single country code - for instance, the North American Number Plan (NANP) - CountryDetectors are employed to provide additional intepretation. These detectors are not perfect, but they should catch many ambiguous situations.
 
 The detectors are configured in `country_detectors.yaml`.
 
