@@ -4,23 +4,12 @@ module Countries::PhoneNumbers::Extensions
     base.extend ClassMethods
   end
   
-  def format_phone_number( number, options={} )
-    Phony.formatted( Phony.normalize( number ), options )
-  end
-  
-  def format_local_phone_number( number, options={} )
-    format_phone_number( number, {format: :local}.merge(options) )
-  end
-  
-  def format_international_phone_number( number, options={} )
-    format_phone_number( number, {format: :international}.merge(options) )
-  end
-  
-  def format_national_phone_number( number, options={} )
-    format_phone_number( number, {format: :national}.merge(options) )
-  end
-  
   module ClassMethods
+
+    def plausible_phone_number?( number )
+      Phony.plausible?( number )
+    end
+  
     def normalize_phone_number( number )
       Phony.normalize( number )
     end
@@ -60,7 +49,7 @@ module Countries::PhoneNumbers::Extensions
     ##
     # Find the first country by the given telephone number. Returns the country object itself.
     def find_country_by_phone_number( number )
-      found = Country.find_all_countries_by_phone_number(number)
+      found = find_all_countries_by_phone_number(number)
       found.nil? ? nil : found.first
     end
     
