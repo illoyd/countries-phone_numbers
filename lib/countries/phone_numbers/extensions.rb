@@ -5,7 +5,7 @@ module Countries::PhoneNumbers::Extensions
   end
   
   def format_phone_number( number, options={} )
-    Phony.formatted( number, options )
+    Phony.formatted( Phony.normalize( number ), options )
   end
   
   def format_local_phone_number( number, options={} )
