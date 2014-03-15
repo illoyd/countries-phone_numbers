@@ -6,6 +6,7 @@ require 'phony'
 
 # Countries::PhoneNumber
 require 'countries/phone_numbers/extensions'
+require 'countries/phone_numbers/formatters'
 require 'countries/phone_numbers/detector_factory'
 require 'countries/phone_numbers/detector'
 require 'countries/phone_numbers/one_of_detector'
@@ -17,6 +18,7 @@ require 'countries/phone_numbers/start_with_detector'
 module Countries
   module PhoneNumbers
     include Extensions
+    include Formatters
     DATA_FILE = File.join( File.dirname(__FILE__), 'phone_numbers', 'detectors.yaml' )
 
     ##
@@ -36,6 +38,3 @@ module Countries
 
   end
 end
-
-# Merge the phone number extensions into the base Country object.
-require 'countries/phone_numbers/ext'
