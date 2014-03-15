@@ -4,7 +4,7 @@ require "countries/phone_numbers/version"
 require 'countries'
 require 'phony'
 
-# Country::PhoneNumber
+# Countries::PhoneNumber
 require 'countries/phone_numbers/extensions'
 require 'countries/phone_numbers/detector_factory'
 require 'countries/phone_numbers/detector'
@@ -16,8 +16,8 @@ require 'countries/phone_numbers/start_with_detector'
 
 module Countries
   module PhoneNumbers
-    extend Extensions::ClassMethods
-    DATA_FILE = File.join( 'lib', 'countries', 'phone_numbers', 'detectors.yaml' )
+    include Extensions
+    DATA_FILE = File.join( File.dirname(__FILE__), 'phone_numbers', 'detectors.yaml' )
 
     ##
     # Find all countries with shared country codes.
