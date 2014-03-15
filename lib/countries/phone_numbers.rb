@@ -16,8 +16,8 @@ require 'countries/phone_numbers/start_with_detector'
 
 module Countries
   module PhoneNumbers
-    extend Extensions::ClassMethods
-    DATA_FILE = File.join( 'lib', 'countries', 'phone_numbers', 'detectors.yaml' )
+    include Extensions
+    DATA_FILE = File.join( File.dirname(__FILE__), 'phone_numbers', 'detectors.yaml' )
 
     ##
     # Find all countries with shared country codes.
