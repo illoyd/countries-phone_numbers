@@ -14,7 +14,7 @@ describe ISO3166::Country, '#find_*_by_phone_number' do
     Country.find_country_by_phone_number( 'abc' ).should == nil
   end
   
-  # Test all data given in the 'TEST' block above
+  # Test all data given in the 'TEST' block (defined in the spec helper)
   TEST_DATA.each do |alpha2, numbers|
     numbers.each do |number|
       it "recognises #{number} as #{alpha2.to_s}" do

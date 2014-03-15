@@ -76,7 +76,7 @@ module Countries::PhoneNumbers::Extensions
       if detector
         return detector.find_all_countries_by_phone_number( normalised_number )
        
-      # Otherwise ask the general code base for the number
+      # Otherwise ask Country for the number
       else
         return Country.find_all_countries_by_country_code( country_code )
       end
