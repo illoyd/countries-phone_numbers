@@ -16,6 +16,17 @@ Or install it yourself as:
 
     $ gem install countries-phone_numbers
 
+By default the fancy new phone number methods won't be added to the base Country object, so as not to pollute the namespace too much. You can always use the
+Countries::PhoneNumbers module to query for countries by phone numbers, as well as use the phone number formatters.
+
+To add the finders to the `Country` object, `require` the `ext_finders` file like so:
+
+    require countries/phone_numbers/ext_finders
+
+To add the formatters to the `Country` object, `require` the `ext_formatters` file like so:
+
+    require countries/phone_numbers/ext_formatters
+
 ## Usage
 
 It's easy. Just use the `Country.find_country_by_phone_number(number)` or `Country.find_by_phone_number(number)` methods just like you would for any other Country search. And just like with default Country search methods, it will return either an array of data or a Country object.
