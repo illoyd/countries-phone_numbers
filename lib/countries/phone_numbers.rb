@@ -4,7 +4,7 @@ require "countries/phone_numbers/version"
 require 'countries'
 require 'phony'
 
-# Country::PhoneNumber
+# Countries::PhoneNumber
 require 'countries/phone_numbers/extensions'
 require 'countries/phone_numbers/detector_factory'
 require 'countries/phone_numbers/detector'
