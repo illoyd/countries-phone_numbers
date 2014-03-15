@@ -36,3 +36,6 @@ module Countries
 
   end
 end
+
+# Merge the phone number extensions into the base Country object.
+require 'countries/phone_numbers/ext'

@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'countries/phone_numbers/ext'
 
 describe ISO3166::Country, '#find_*_by_phone_number' do
   subject { Country }
